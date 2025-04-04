@@ -15,12 +15,31 @@ def reading(filename, nbr, v_nbr):
     :param v_nbr: le numero de l'element dans la ligne du fichier
     :return: la valeur de l'élément cherché
     """
-    with open(filename, newline='', encoding="utf8") as csvfile:
-        reader = csv.reader(csvfile)
+    try:
+        with open(filename, newline='', encoding="utf8") as csvfile:
+            reader = csv.reader(csvfile)
 
-        r_ligne = [ligne for idx, ligne in enumerate(reader)if idx == nbr] #ch3ka sur stackoverflow https://stackoverflow.com/questions/26464567/csv-read-specific-row
-        r_val = [valeur for idx, valeur in enumerate(r_ligne)if idx == v_nbr]
+            for idx, ligne in enumerate(reader):
+                if idx == nbr:
+                    if 0 <= v_nbr < len(ligne):
+                        return ligne[v_nbr], ligne
+                    else:
+                        return "valeur introuvable"
 
-    return r_val
+    except FileNotFoundError:
+        return "le fichier n'existe pas."
 
-print(reading("data.csv", 2, 5))
+
+
+
+def affichage_tout(index_aliment):
+    """
+    prend le numero de ligne du fichier et reoure toutes les propriétés
+    :param index_aliment:
+    :return: str
+    """
+    truc = reading("data.csv", index_aliment, 1)
+
+    print(f"{truc[0]}")
+
+affichage_tout(1)
