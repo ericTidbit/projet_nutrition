@@ -43,19 +43,19 @@ def affichage_tout(index_aliment):
     :param index_aliment:
     :return: str
     """
-    print(reading("data.csv", index_aliment, 1),"\n")
+    print(reading("../data/data.csv", index_aliment, 1), "\n")
     for charateriste in range(33):
-        ligne = reading("data.csv", index_aliment, charateriste)
+        ligne = reading("../data/data.csv", index_aliment, charateriste)
         if ligne == "" or ligne == "valeur introuvable" or ligne == 0 or ligne is None:
             pass
         else:
-            print(f"{reading("data.csv",0, charateriste)}: {reading("data.csv", index_aliment, charateriste)}")
+            print(f"{reading("../data/data.csv", 0, charateriste)}: {reading("../data/data.csv", index_aliment, charateriste)}")
 
 
 
 
 
-with open("data.csv", newline='', encoding="utf8") as csvfile: # ouvre le fichier
+with open("../data/data.csv", newline='', encoding="utf8") as csvfile: # ouvre le fichier
     reader = csv.reader(csvfile)
     for ligne in reader:
         print(f'"{ligne[1]}",')
