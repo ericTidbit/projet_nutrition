@@ -3,7 +3,7 @@ from enum import Enum
 
 class ValeurAliments(Enum):
 
-    CATEGORIE% = 0
+    CATEGORIE = 0
     ALIMENTS = 1
     MESURE = 2
     POIDS_G = 3

@@ -58,4 +58,4 @@ def affichage_tout(index_aliment):
 with open("data.csv", newline='', encoding="utf8") as csvfile: # ouvre le fichier
     reader = csv.reader(csvfile)
     for ligne in reader:
-        print(ligne[1])
+        print(f'"{ligne[1]}",')
