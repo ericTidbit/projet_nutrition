@@ -798,10 +798,10 @@ aliments_list = ["Aliments",
 
 ]
 
-python_vars = [normalize_string(item) for item in aliments_list]
+python_vars = aliments_list
 
 # Print the results
 count = 0
 for var in python_vars:
-    print(f"{var.upper()} = {count}")
+    print(f'"{var}":{count},')
     count += 1
