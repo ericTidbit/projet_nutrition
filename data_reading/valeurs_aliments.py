@@ -1,4 +1,7 @@
+# Julien
+
 from enum import Enum
+
 
 
 class ValeurAliments(Enum):

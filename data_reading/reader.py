@@ -1,4 +1,4 @@
-# codé par Julien
+# Julien
 
 
 
@@ -50,12 +50,3 @@ def affichage_tout(index_aliment):
             pass
         else:
             print(f"{reading("../data/data.csv", 0, charateriste)}: {reading("../data/data.csv", index_aliment, charateriste)}")
-
-
-
-
-
-with open("../data/data.csv", newline='', encoding="utf8") as csvfile: # ouvre le fichier
-    reader = csv.reader(csvfile)
-    for ligne in reader:
-        print(f'"{ligne[1]}",')
