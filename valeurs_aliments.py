@@ -1,0 +1,56 @@
+from enum import Enum
+
+
+class ValeurAliments(Enum):
+
+    CATEGORIE% = 0
+    ALIMENTS = 1
+    MESURE = 2
+    POIDS_G = 3
+    ENERGIE_KCAL = 4
+    ENERGIE_KJ = 5
+    PROTEINES_G = 6
+    GLUCIDES_G = 7
+    SUCRES_TOTAUX_G = 8
+    FIBRES_ALIMENTAIRES_TOTALES_G = 9
+    GRAS_TOTAUX_G = 10
+    GRAS_SATURES_G = 11
+    GRAS_MONOINSATURES_G = 12
+    GRAS_POLYINSATURES_G = 13
+    DHA_G = 14
+    EPA_G = 15
+    GRAS_TRANS_G = 16
+    CHOLESTEROL_MG = 17
+    CALCIUM_MG = 18
+    FER_MG = 19
+    SODIUM_MG = 20
+    POTASSIUM_MG = 21
+    MAGNESIUM_MG = 22
+    PHOSPHORE_MG = 23
+    THIAMINE_MG = 24
+    RIBOFLAVINE_MG = 25
+    NIACINE_EN = 26
+    VITAMINE_A_EAR = 27
+    BETA_CAROTENE_MC = 28
+    LYCOPENE_MC = 29
+    VITAMINE_C_MG = 30
+    VITAMINE_D_MC = 31
+    VITAMINE_E_MG = 32
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

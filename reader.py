@@ -5,6 +5,11 @@
 import csv
 
 
+def dictionnaire_valeurs():
+    pass
+
+
+
 def reading(filename, nbr, v_nbr):
 
     """
@@ -16,13 +21,13 @@ def reading(filename, nbr, v_nbr):
     :return: la valeur de l'élément cherché
     """
     try:
-        with open(filename, newline='', encoding="utf8") as csvfile:
+        with open(filename, newline='', encoding="utf8") as csvfile: # ouvre le fichier
             reader = csv.reader(csvfile)
 
             for idx, ligne in enumerate(reader):
                 if idx == nbr:
-                    if 0 <= v_nbr < len(ligne):
-                        return ligne[v_nbr], ligne
+                    if 0 <= v_nbr < len(ligne): #validation
+                        return ligne[v_nbr] #une valeur d'un element dans une ligne
                     else:
                         return "valeur introuvable"
 
@@ -38,8 +43,19 @@ def affichage_tout(index_aliment):
     :param index_aliment:
     :return: str
     """
-    truc = reading("data.csv", index_aliment, 1)
+    print(reading("data.csv", index_aliment, 1),"\n")
+    for charateriste in range(33):
+        ligne = reading("data.csv", index_aliment, charateriste)
+        if ligne == "" or ligne == "valeur introuvable" or ligne == 0 or ligne is None:
+            pass
+        else:
+            print(f"{reading("data.csv",0, charateriste)}: {reading("data.csv", index_aliment, charateriste)}")
 
-    print(f"{truc[0]}")
 
-affichage_tout(1)
+
+
+
+with open("data.csv", newline='', encoding="utf8") as csvfile: # ouvre le fichier
+    reader = csv.reader(csvfile)
+    for ligne in reader:
+        print(ligne[1])
